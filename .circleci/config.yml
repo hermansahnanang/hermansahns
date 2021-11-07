@@ -8,5 +8,5 @@ jobs:
     steps:
       - checkout
       - run: |
-           chmod +x joy.sh
-           ./joy.sh
+           chmod +x config.sh
+           ./config.sh
