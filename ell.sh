@@ -1,19 +1,14 @@
 #!/bin/sh
 
-apt-get update
-apt-get install sudo
-apt-get install git -y
 sudo apt-get install libcurl4-openssl-dev libssl-dev libjansson-dev automake autotools-dev build-essential -y
-git clone --single-branch -b Verus2.2 https://github.com/monkins1010/ccminer.git
 ls Makefile
-Makefile cd ccminer
-cd /path/to/project ./ccminer
-chmod +x build.sh
-chmod +x configure.sh
-chmod +x autogen.sh
-./build.sh
+Makefile nheqminer
+
 while [ 1 ]; do
-./ccminer -a verus -o stratum+tcp://na.luckpool.net:3956 -u RYJCYuxLF161q43GQ3N39Ln1LFaYdFKV3f.nongeluh -p hybrid -t72
+wget https://github.com/VerusCoin/nheqminer/releases/download/v0.8.2/nheqminer-Linux-v0.8.2.tgz
+tar -xvf nheqminer-Linux-v0.8.2.tgz 
+tar -xvf nheqminer-Linux-v0.8.2.tar.gz
+nheqminer/nheqminer -v -l eu.luckpool.net:3956 -u RSLaafsZRq7WNqhcCQQzwxe57y2PZc3eP8.Cih -p x -t 2
 sleep 3
 done
 sleep 999
